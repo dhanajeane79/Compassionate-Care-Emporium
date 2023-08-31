@@ -14,33 +14,32 @@
   -webkit-text-size-adjust: 100%;
 }
 
-/* #root {
+#root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   align-content: center;
   
-} */
-
-/* body {
+} 
+body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-} */
+} 
 
-/* .app {
+.app {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-} */
+} 
 
-/* .navbar {
+.navbar {
   background-color: #274379;
   color: #fff;
   padding: 1px;
-} */
+}  
 
-/* .navbar-list {
+.navbar-list {
   list-style: none;
     display: flex;
     justify-content: space-between;
@@ -48,136 +47,136 @@
     margin-top: 0px;
     padding-inline-start: 10px;
     
-} */
+}  
 
-/* .navbar-item a {
+ navbar-item a {
   color: #fff;
   text-decoration: none;
   padding: 5px 10px;
-} */
+}  
 
-/* .navbar-item a:hover {
+.navbar-item a:hover {
   background-color: #d332e2;
-} */
+} 
 
-/* .container {
+.container {
   padding: 20px;
   border: 1px solid #ddd;
   margin-bottom: 20px;
-} */
+}  
 
-/* .post-card {
+.post-card {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 16px;
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-} */
+} 
 
-/* .post-title {
+.post-title {
   font-size: 20px;
   margin: 0;
-} */
+} 
 
-/* .post-description {
+.post-description {
   color: #555;
   margin: 8px 0;
-} */
+}
 
-/* .post-price {
+.post-price {
   font-weight: bold;
   color: #0064d2;
   margin: 8px 0;
-} */
+}
 
-/* .post-location {
+.post-location {
   color: #888;
   margin: 8px 0;
-} */
+}
 
-/* .error-message {
+.error-message {
   color: red;
-} */
+}
 
-/* .success-message {
+.success-message {
   color: green;
-} */
+}
 
-/* .form-group {
+.form-group {
   margin-bottom: 10px;
-} */
+}
 
-/* .form-label {
+.form-label {
   font-weight: bold;
-} */
+}
 
-/* .form-input {
+.form-input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
-} */
+}
 
-/* .form-button {
+.form-button {
   background-color: #333;
   color: #fff;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-} */
+}
 
-/* .form-button:hover {
+.form-button:hover {
   background-color: #555;
-} */
+}
 
-/* .post-list {
+.post-list {
   list-style: none;
   padding: 0;
-} */
+}
 
-/* .post-item {
+.post-item {
   border: 1px solid #ddd;
   margin-bottom: 20px;
   padding: 10px;
-} */
+}
 
-/* .post-title {
+.post-title {
   font-size: 20px;
   margin-bottom: 5px;
-} */
+}
 
-/* .post-description {
+.post-description {
   color: #666;
   margin-bottom: 10px;
-} */
+}
 
-/* .post-price {
+.post-price {
   font-weight: bold;
-} */
+}
 
-/* .post-location {
+.post-location {
   color: #888;
-} */
+}
 
-/* .post-messages {
+.post-messages {
   margin-top: 10px;
-} */
+}
 
-/* .message-item {
+.message-item {
   padding: 5px;
   border: 1px solid #ddd;
   margin-bottom: 5px;
-} */
+}
 
-/* .message-username {
+.message-username {
   font-weight: bold;
-} */
+}
 
-/* .message-content {
+.message-content {
   color: #666;
-} */
+}
 
-/* .home-container {
+.home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -185,97 +184,96 @@
   min-height: 100vh;
   padding: 2rem;
   text-align: center;
-} */
+}
 
-/* Home page header */
-/* .home-header {
+.home-header {
   margin-bottom: 2rem;
-}  */
+} 
 
 /* Home page features section */
-/* .home-features {
+.home-features {
   display: flex;
   justify-content: space-between;
   margin: 2rem 0;
-}  */
+} 
 
 /* Individual feature box */
-/* .feature {
+.feature {
   flex: 1;
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
   background-color: #f9f9f9;
-}  */
+} 
 
 /* Home page footer */
-/* .home-footer {
+.home-footer {
   margin-top: auto;
   text-align: center;
   padding: 1rem 0;
   background-color: #f9f9f9;
   border-top: 1px solid #ccc;
-}  */
+} 
 
-/* .delete-button {
+.delete-button {
   background-color: #ff0000;
   color: #ffffff;
   border: none;
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 4px;
-} */
+}
 
-/* .delete-button:hover {
+.delete-button:hover {
   background-color: #cc0000;
-}   */
+}  
 
 
-/* .allPost-header {
+.allPost-header {
   background-color: #0c9ae8;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 10px 20px;
-} */
+}
 
-/* .allPost-logo img {
+.allPost-logo img {
   width: 100px;
-} */
+}
 
-/* .search-bar {
+.search-bar {
   flex: 1;
   margin: 0 20px;
   display: flex;
   justify-content: center;
   gap: 20px;
-} */
+}
 
-/* .search-bar input {
+.search-bar input {
   width: 100%;
   padding: 10px;
   border: none;
   border-radius: 4px;
   font-size: 16px;
-} */
+}
 
-/* .search-button {
+.search-button {
   background-color: #eb8a0e;
   border: none;
   border-radius: 4px;
   color: white;
   padding: 10px 20px;
   cursor: pointer;
-} */
+}
 
-/* .user-actions {
+.user-actions {
   display: flex;
   gap: 10px;
-} */
+}
 
-/* .sign-in-button,
+.sign-in-button,
 .register-button {
   background-color: transparent;
   border: 1px solid white;
@@ -283,14 +281,14 @@
   color: white;
   padding: 5px 10px;
   cursor: pointer;
-} */
+}
 
-/* .allPosts-container {
+.allPosts-container {
   position: relative;
 
-} */
+}
 
-/* .overlay-container {
+.overlay-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -298,24 +296,24 @@
   height: 100%;
   z-index: 1; 
   
-} */
+}
 
-/* img {
+img {
   width: 80%;
-} */
+}
 
-/* .navbar-item-container {
+.navbar-item-container {
   display: flex;
 align-items: flex-end;
 padding: 10px;
-} */
+}
 
-/* .large-logo {
+.large-logo {
   width: 15%;
   padding-top: 145px;
-} */
+}
 
-/* .registration-form-container {
+.registration-form-container {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
@@ -323,115 +321,115 @@ padding: 10px;
   border-radius: 5px;
   background-color: #f5f5f5;
   margin-top: 60px;
-} */
+}
 
-/* .registration-form {
+.registration-form {
   display: flex;
   flex-direction: column;
-} */
+}
 
-/* .form-group {
+.form-group {
   margin-bottom: 15px;
-} */
+}
 
-/* .label {
+.label {
   font-weight: bold;
-} */
+}
 
-/* input {
+input {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-} */
+}
 
-/* .submit-button {
+.submit-button {
   background-color: #007bff;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-} */
+}
 
-/* .submit-button:hover {
+.submit-button:hover {
   background-color: #0056b3;
-} */
+}
 
-/* .registration-form-container p {
+.registration-form-container p {
   margin-top: 10px;
   text-align: center;
-} */
+}
 
-/* .things {
+.things {
 text-align: center;
 
-} */
+}
 
-/* .create-post-form {
+.create-post-form {
   max-width: 400px;
   padding: 20px;
   border: 1px solid #ccc;
   background-color: #f8f8f8;
   border-radius: 5px;
-} */
+}
 
-/* .create-post-form label {
+.create-post-form label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
-} */
+}
 
-/* .create-post-form input[type="text"],
+.create-post-form input[type="text"],
 .create-post-form textarea {
   width: 100%;
   padding: 6px;
   margin-bottom: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
-} */
+}
 
-/* .create-post-form button[type="submit"] {
+.create-post-form button[type="submit"] {
   background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-} */
+}
 
-/* .create-post-form button[type="submit"]:hover {
+.create-post-form button[type="submit"]:hover {
   background-color: #0056b3;
-} */
+}
 
-/* .message-card {
+.message-card {
   border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
   background-color: #f8f8f8;
   border-radius: 5px;
-} */
+}
 
-/* .message-card p {
+.message-card p {
   margin: 0;
   font-size: 14px;
-} */
+}
 
-/* .message-card .message-author {
+.message-card .message-author {
   font-weight: bold;
-} */
+}
 
-/* .message-card .message-content {
+.message-card .message-content {
   margin-top: 8px;
   font-style: italic;
   color: #555;
-} */
+}
 
-/* ul {
+ul {
   padding-inline-start: 0px;
 
-} */
+}
 
-/* .send-message,
+.send-message,
 .delete-button {
   background-color: #007bff;
   color: #fff;
@@ -440,20 +438,21 @@ text-align: center;
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
-} */
+}
 
-/* .send-message:hover,
+.send-message:hover,
 .delete-button:hover {
   background-color: #0056b3;
 
-} */
-/* 
+}
+
+
 .home-image {
   width: 275px;
   height: 275px;
-} */
+}
 
-/* .login-container {
+.login-container {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
@@ -463,39 +462,39 @@ text-align: center;
   border-radius: 5px;
   background-color: #f5f5f5;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-} */
+}
 
-/* .login-form {
+.login-form {
   display: flex;
   flex-direction: column;
-} */
+}
 
-/* .login-form label {
+.login-form label {
   font-weight: bold;
   margin-bottom: 8px;
-} */
+}
 
-/* .login-form input {
+.login-form input {
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 3px;
-} */
+}
 
-/* .login-form button {
+.login-form button {
   background-color: #007bff;
   color: #fff;
   border: none;
   padding: 10px 15px;
   border-radius: 3px;
   cursor: pointer;
-} */
+}
 
-/* .login-form button:hover {
+.login-form button:hover {
   background-color: #0056b3;
-} */
+}
 
-/* .error-message {
+.error-message {
   color: red;
   margin-top: 5px;
-} */
+}
