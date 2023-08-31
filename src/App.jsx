@@ -15,7 +15,7 @@ import Login from "./Components/Login";
 
 
 function App() {
-  const BASE_URL = 'https://fakestoreapi.com/';
+  const BASE_URL = 'https://fakestoreapi.com';
   const storedToken = localStorage.getItem("authToken"); // Check if there is a token in localStorage
   const [token, setToken] = useState(storedToken || ""); // Set initial value to storedToken
 
@@ -44,7 +44,7 @@ function App() {
     <Router>
       <div className="app">
 
-      <NavBar isLoggedIn={Boolean(token)} logout={handleLogout} /> 
+      <NavBar /> 
       
         <Routes>
           <Route path="/" element={<Home />} />
