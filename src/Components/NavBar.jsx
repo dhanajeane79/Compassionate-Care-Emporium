@@ -25,16 +25,16 @@ function NavBar() {
                 <Link to="/products" className="nav-link">
                   All Products
                 </Link>
-                <NavDropdown title="Link" id="navbarScrollingDropdown">
+                <NavDropdown title="Categories" id="navbarScrollingDropdown">
                   <NavDropdown.Item as={Link} to="/action3">
-                    Action
+                    For Your Loved One
                   </NavDropdown.Item>
                   <NavDropdown.Item as={Link} to="/action4">
-                    Another action
+                    For You
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item as={Link} to="/action5">
-                    Something else here
+                    Connect with a fellow Caregiver
                   </NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link href="#" disabled>
