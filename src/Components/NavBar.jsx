@@ -37,9 +37,9 @@ function NavBar() {
                     Connect with a fellow Caregiver
                   </NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link href="#" disabled>
-                  Link
-                </Nav.Link>
+                <Link to="/login" className="nav-link">
+                  Login
+                </Link>
               </Nav>
               <Form className="d-flex">
                 <Form.Control type="search" placeholder="Search" className="me-2" aria-label="Search" />
