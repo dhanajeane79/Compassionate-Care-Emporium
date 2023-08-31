@@ -1,3 +1,4 @@
+
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -13,7 +14,7 @@ function NavBar() {
         <Navbar expand="lg" className="bg-body-tertiary fixed-top" style={{ height: '60px' }}>
         <Container fluid style={{ maxWidth: '1200px' }}>
             <Link to="/" className="navbar-brand">
-              Navbar scroll
+              Compassionate Care Emporium
             </Link>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
@@ -21,8 +22,8 @@ function NavBar() {
                 <Link to="/" className="nav-link">
                   Home
                 </Link>
-                <Link to="/link" className="nav-link">
-                  Link
+                <Link to="/products" className="nav-link">
+                  All Products
                 </Link>
                 <NavDropdown title="Link" id="navbarScrollingDropdown">
                   <NavDropdown.Item as={Link} to="/action3">
