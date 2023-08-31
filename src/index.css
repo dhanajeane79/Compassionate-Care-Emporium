@@ -33,13 +33,13 @@ body {
   padding: 20px;
 } 
 
-.navbar {
+ .navbar {
   background-color: #274379;
   color: #fff;
   padding: 1px;
-}  
+}   
 
-.navbar-list {
+ .navbar-list {
   list-style: none;
     display: flex;
     justify-content: space-between;
@@ -47,17 +47,17 @@ body {
     margin-top: 0px;
     padding-inline-start: 10px;
     
-}  
+}   
 
- navbar-item a {
+  navbar-item a {
   color: #fff;
   text-decoration: none;
   padding: 5px 10px;
-}  
+}   
 
 .navbar-item a:hover {
   background-color: #d332e2;
-} 
+}  
 
 .container {
   padding: 20px;
@@ -306,7 +306,7 @@ img {
   display: flex;
 align-items: flex-end;
 padding: 10px;
-}
+} 
 
 .large-logo {
   width: 15%;
