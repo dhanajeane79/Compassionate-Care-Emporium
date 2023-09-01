@@ -9,6 +9,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { fetchWithHeaders } from "../Helpers/api";
 
+
+
 function Login({ BASE_URL, handleLoginSuccess }) {
     const [username, setUsername] = useState("");  // State to store username 
     const [password, setPassword] = useState(""); // State to store password inputs
@@ -39,34 +41,31 @@ function Login({ BASE_URL, handleLoginSuccess }) {
     };
   
     return (
-      <div className="login-container">
-        <h2>Login</h2>
-        {errorMessage && <p className="error-message">{errorMessage}</p>}
-        <form className="login-form" onSubmit={handleLoginSubmit}>
-          <div>
-            <label htmlFor="loginUsername">Username</label>
-            <input
-              type="text"
-              id="loginUsername"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="loginPassword">Password</label>
-            <input
-              type="password"
-              id="loginPassword"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
-          <button type="submit">Login</button>
-        </form>
-      </div>
-    );
-  }
+       
+        <div >
+            <h2 className= "login-header">Login</h2>
+            {errorMessage && <p className="error-message">{errorMessage}</p>}
+        <Form onSubmit={handleLoginSubmit}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control className= "login-input" type="email" placeholder="Enter email" />
+          </Form.Group>
+    
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control className= "login-input" type="password" placeholder="Password" />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicCheckbox">
+            <Form.Check type="checkbox" label="Keep me signed in" />
+          </Form.Group>
+    
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
+        </div>
+      );
+    }
+    
   
   export default Login;
