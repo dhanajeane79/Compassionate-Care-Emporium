@@ -8,7 +8,7 @@ import Form from 'react-bootstrap/Form';
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { fetchWithHeaders } from "../Helpers/api";
-
+import "../CSS-Components/Login-Form.css"
 
 
 function Login({ BASE_URL, handleLoginSuccess }) {
@@ -43,7 +43,7 @@ function Login({ BASE_URL, handleLoginSuccess }) {
     return (
        
         <div >
-            <h2 className= "login-header">Login</h2>
+             <h3>Sign In</h3>
             {errorMessage && <p className="error-message">{errorMessage}</p>}
         <Form onSubmit={handleLoginSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
