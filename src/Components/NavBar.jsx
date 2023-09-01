@@ -40,6 +40,9 @@ function NavBar() {
                 <Link to="/login" className="nav-link">
                   Login
                 </Link>
+                <Link to="/register" className="nav-link">
+                  Register
+                </Link>
               </Nav>
               <Form className="d-flex">
                 <Form.Control type="search" placeholder="Search" className="me-2" aria-label="Search" />
