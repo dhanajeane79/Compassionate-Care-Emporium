@@ -1,14 +1,14 @@
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-unused-vars */
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import "./index.css";
 import NavBar from "./Components/NavBar";
 import Home from "./Components/Home";
 import AllProducts from "./Components/AllProducts";
-// import RegistrationForm from "./Components/RegistrationForm";
+import RegistrationForm from "./Components/RegistrationForm";
 import Login from "./Components/Login";
 
 
@@ -49,7 +49,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<AllProducts BASE_URL={BASE_URL} token={token} />} />
-          {/* <Route path="/register" element={<RegistrationForm BASE_URL={BASE_URL} />} /> */}
+          <Route path="/register" element={<RegistrationForm BASE_URL={BASE_URL} />} /> 
           <Route path="/login" element={<Login BASE_URL={BASE_URL} handleLoginSuccess={handleLoginSuccess} />} /> 
         </Routes>
       </div>
