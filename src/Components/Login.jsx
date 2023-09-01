@@ -47,13 +47,28 @@ function Login({ BASE_URL, handleLoginSuccess }) {
             {errorMessage && <p className="error-message">{errorMessage}</p>}
         <Form onSubmit={handleLoginSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
-            <Form.Control className= "login-input" type="email" placeholder="Enter email" />
+            <Form.Label>Username</Form.Label>
+            <Form.Control  
+            type="text"
+            className="loginUsername"
+            placeholder="Enter Username" 
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+            />
+          
           </Form.Group>
     
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control className= "login-input" type="password" placeholder="Password" />
+            <Form.Control 
+            type="password" 
+            className= "loginPassword"
+            placeholder="Password" 
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <Form.Check type="checkbox" label="Keep me signed in" />

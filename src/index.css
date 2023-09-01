@@ -504,7 +504,8 @@ padding-top: 20px;
 
 }
 
-.login-input {
+.loginUsername,
+.loginPassword {
 width: 20%;
 
 }
