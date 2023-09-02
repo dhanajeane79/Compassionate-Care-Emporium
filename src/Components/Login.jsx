@@ -108,7 +108,7 @@ import "../CSS-Components/Login-Form.css"
     
   
 function Login({ BASE_URL, handleLoginSuccess }) {
-  const [username, setUsername] = useState("");  // State to store username 
+  const [email, setEmail] = useState("");  // State to store username 
   const [password, setPassword] = useState(""); // State to store password inputs
   const [errorMessage, setErrorMessage] = useState(""); // State to handle error messages
   const navigate = useNavigate(); // Hook to navigate to different routes
@@ -117,31 +117,36 @@ function Login({ BASE_URL, handleLoginSuccess }) {
   const handleLoginSubmit = async (event) => {
     event.preventDefault();
     try {
-      const data = await fetch('https://fakestoreapi.com/auth/login',{
-        method:'POST',
+      const response = await fetch(`${BASE_URL}/auth/login`, {
+        method: 'POST',
         headers: {
           "Content-Type": "application/json; charset=utf-8",
         },
         body: JSON.stringify({
-          username: username, 
-          password: password, 
-        })
+          email,
+          password
+        }),
       });
+
 
     // const data = await response.json(); 
    
-    if (data.ok) {
+    if (response.status === 201) { // Check for HTTP status 201 (Created)
+      const data = await response.json();
+      const accessToken = data.access_token;
+      
+      console.log(email)
+      console.log(password)
       console.log("Login successful");
       console.log(data);
-      console.log(username)
-      console.log(password)
 
-      if (data.success) {
-        handleLoginSuccess(data.data.token); // Call the handleLoginSuccess function to set the token
-        localStorage.setItem("authToken", data.data.token); // Store the token in localStorage
+      if (accessToken) {
+        
+        handleLoginSuccess(accessToken); // Call the handleLoginSuccess function to set the token
+        localStorage.setItem("authToken", accessToken); // Store the token in localStorage
         navigate("/products"); // Navigate to the products page
       } else {
-        setErrorMessage("Incorrect username or password"); // Display error message for incorrect credentials
+        setErrorMessage("Incorrect email or password"); // Display error message for incorrect credentials
       }
     } else {
       setErrorMessage("An error occurred during login"); // Display error message for other login errors
@@ -157,12 +162,12 @@ function Login({ BASE_URL, handleLoginSuccess }) {
       {errorMessage && <p className="error-message">{errorMessage}</p>}
       <form className="login-form" onSubmit={handleLoginSubmit}>
         <div>
-          <label htmlFor="loginUsername">Username</label>
+          <label htmlFor="loginUsername">email</label>
           <input
             type="text"
             id="loginUsername"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
         </div>
