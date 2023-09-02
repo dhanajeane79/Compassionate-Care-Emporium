@@ -124,7 +124,7 @@ const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
     const userRef = useRef();
     const errRef = useRef();
 
-    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [validName, setValidName] = useState(false);
     const [userFocus, setUserFocus] = useState(false);
 
@@ -144,8 +144,8 @@ const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
     }, [])
 
     useEffect(() => {
-        setValidName(USER_REGEX.test(username));
-    }, [username])
+        setValidName(USER_REGEX.test(email));
+    }, [email])
 
     useEffect(() => {
         setValidPwd(PWD_REGEX.test(password));
@@ -154,12 +154,12 @@ const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 
     useEffect(() => {
         setErrMsg('');
-    }, [username, password, matchPwd])
+    }, [email, password, matchPwd])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         // if button enabled with JS hack
-        const v1 = USER_REGEX.test(username);
+        const v1 = USER_REGEX.test(email);
         const v2 = PWD_REGEX.test(password);
         if (!v1 || !v2) {
             setErrMsg("Invalid Entry");
@@ -167,7 +167,7 @@ const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
         }
         try {
             const response = await axios.post(REGISTER_URL,
-                JSON.stringify({ username, password }),
+                JSON.stringify({ email, password }),
                 {
                     headers: { 'Content-Type': 'application/json' },
                     withCredentials: true
@@ -179,14 +179,14 @@ const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
             setSuccess(true);
             //clear state and controlled inputs
             //need value attrib on inputs for this
-            setUsername('');
+            setEmail('');
             setPassword('');
             setMatchPwd('');
         } catch (err) {
             if (!err?.response) {
                 setErrMsg('No Server Response');
             } else if (err.response?.status === 409) {
-                setErrMsg('Username Taken');
+                setErrMsg('Email address is already associated with an account');
             } else {
                 setErrMsg('Registration Failed')
             }
@@ -211,22 +211,22 @@ const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
                         <label htmlFor="username">
                             Username:
                             <FontAwesomeIcon icon={faCheck} className={validName ? "valid" : "hide"} />
-                            <FontAwesomeIcon icon={faTimes} className={validName || !username ? "hide" : "invalid"} />
+                            <FontAwesomeIcon icon={faTimes} className={validName || !email ? "hide" : "invalid"} />
                         </label>
                         <input
                             type="text"
                             id="username"
                             ref={userRef}
                             autoComplete="off"
-                            onChange={(e) => setUsername(e.target.value)}
-                            value={username}
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
                             required
                             aria-invalid={validName ? "false" : "true"}
                             aria-describedby="uidnote"
                             onFocus={() => setUserFocus(true)}
                             onBlur={() => setUserFocus(false)}
                         />
-                        <p id="uidnote" className={userFocus && username && !validName ? "instructions" : "offscreen"}>
+                        <p id="uidnote" className={userFocus && email && !validName ? "instructions" : "offscreen"}>
                             <FontAwesomeIcon icon={faInfoCircle} />
                             4 to 24 characters.<br />
                             Must begin with a letter.<br />
