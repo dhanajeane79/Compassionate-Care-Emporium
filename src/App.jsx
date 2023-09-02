@@ -15,7 +15,7 @@ import Login from "./Components/Login";
 
 
 function App() {
-  const BASE_URL = 'https://fakestoreapi.com';
+  const BASE_URL = 'https://api.escuelajs.co/api/v1';
   const storedToken = localStorage.getItem("authToken"); // Check if there is a token in localStorage
   const [token, setToken] = useState(storedToken || ""); // Set initial value to storedToken
 
