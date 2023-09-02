@@ -3,7 +3,8 @@ const BASE_URL = 'https://fakestoreapi.com/';
 
 export const makeHeaders = (token) => {
     const headers = {
-      'Content-Type': 'application/json',
+      //Added charset=utf-8  - pat
+      'Content-Type': 'application/json; charset=utf-8',
     };
   
     if (token) {
@@ -12,16 +13,23 @@ export const makeHeaders = (token) => {
   
     return headers;
   };
+  //Added a default value to token if no token is given
+  export const fetchWithHeaders = async (url, method, body, token='') => {
+    console.log(url)
+    console.log(method)
+    console.log(body)
+    console.log(makeHeaders(token))
 
-  export const fetchWithHeaders = async (url, method, body, token) => {
     try {
       const response = await fetch(url, {
-        method,
+       
+        method: method,
         headers: makeHeaders(token),
         body: JSON.stringify(body),
       });
   
       const data = await response.json();
+      console.log(data)
       return data;
     } catch (error) {
       throw new Error('An error occurred during the fetch request.');

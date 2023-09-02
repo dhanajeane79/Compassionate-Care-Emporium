@@ -281,7 +281,7 @@ const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 
                         <button disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
                     </form>
-                    <p>Already have an account? <Link to="/login">Login</Link></p>
+                     <p>Already have an account? <Link to="/login">Login</Link></p>
                 </section>
             )}
         </>

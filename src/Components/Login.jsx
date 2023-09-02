@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 // eslint-disable-next-line no-unused-vars
@@ -11,76 +12,174 @@ import { fetchWithHeaders } from "../Helpers/api";
 import "../CSS-Components/Login-Form.css"
 
 
-function Login({ BASE_URL, handleLoginSuccess }) {
-    const [username, setUsername] = useState("");  // State to store username 
-    const [password, setPassword] = useState(""); // State to store password inputs
-    const [errorMessage, setErrorMessage] = useState(""); // State to handle error messages
-    const navigate = useNavigate(); // Hook to navigate to different routes
+// function Login({ BASE_URL, handleLoginSuccess }) {
+//     const [username, setUsername] = useState("");  // State to store username 
+//     const [password, setPassword] = useState(""); // State to store password inputs
+//     const [errorMessage, setErrorMessage] = useState(""); // State to handle error messages
+//     const navigate = useNavigate(); // Hook to navigate to different routes
   
-    // Function to handle login form submission
-    const handleLoginSubmit = async (event) => {
-      event.preventDefault();
-      try {
-        const data = await fetchWithHeaders(`${BASE_URL}/users/login`, "POST", { // Make a login request with provided credentials
-          user: {
-            username,
-            password,
-          },
-        });
+//     // Function to handle login form submission
+//     const handleLoginSubmit = async (event) => {
+//       event.preventDefault();
+//       try {
+//         const data = await fetchWithHeaders(`${BASE_URL}/auth/login`, "POST", { 
+//           user: {
+//             username,
+//             password,
+//           },
+//         });
   
-        if (data.success) {
-          handleLoginSuccess(data.data.token); // Call the handleLoginSuccess function to set the token
-          localStorage.setItem("authToken", data.data.token); // Store the token in localStorage
-          navigate("/posts"); // Navigate to the posts page
-        } else {
-          setErrorMessage("Incorrect username or password"); // Display error message for incorrect credentials
-        }
-      } catch (error) {
-        setErrorMessage("An error occurred during login"); // Display error message for any other login errors
-      }
-    };
+//         if (data.success) {
+//           handleLoginSuccess(data.data.token); // Call the handleLoginSuccess function to set the token
+//           localStorage.setItem("authToken", data.data.token); // Store the token in localStorage
+//           navigate("/products"); // Navigate to the posts page
+//         } else {
+//           setErrorMessage("Incorrect username or password"); // Display error message for incorrect credentials
+//         }
+//       } catch (error) {
+//         setErrorMessage("An error occurred during login"); // Display error message for any other login errors
+//       }
+//     };
   
-    return (
+//     return (
        
-        <div >
-             <h3>Sign In</h3>
-            {errorMessage && <p className="error-message">{errorMessage}</p>}
-        <Form onSubmit={handleLoginSubmit}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Username</Form.Label>
-            <Form.Control  
+//         <div >
+//              <h3>Sign In</h3>
+//             {errorMessage && <p className="error-message">{errorMessage}</p>}
+//         <Form onSubmit={handleLoginSubmit}>
+//           <Form.Group className="mb-3" controlId="formBasicEmail">
+//             <Form.Label>Username</Form.Label>
+//             <Form.Control  
+//             type="text"
+//             className="loginUsername"
+//             placeholder="Enter Username" 
+//             value={username}
+//             onChange={(e) => setUsername(e.target.value)}
+//             required
+//             />
+          
+//           </Form.Group>
+    
+//           <Form.Group className="mb-3" controlId="formBasicPassword">
+//             <Form.Label>Password</Form.Label>
+//             <Form.Control 
+//             type="password" 
+//             className= "loginPassword"
+//             placeholder="Password" 
+//             value={password}
+//             onChange={(e) => setPassword(e.target.value)}
+//             required
+//             />
+//           </Form.Group>
+//           <Form.Group className="mb-3" controlId="formBasicCheckbox">
+//             <Form.Check type="checkbox" label="Keep me signed in" />
+//           </Form.Group>
+    
+//           <Button variant="primary" type="submit">
+//             Submit
+//           </Button>
+//         </Form>
+//         </div>
+//       );
+//     }
+
+/*
+    fetch('https://fakestoreapi.com/auth/login',{
+            method:'POST',
+            body:JSON.stringify({
+                username: username,
+                password: password
+            })
+        })
+
+    fetch('https://fakestoreapi.com/auth/login',{
+            method:'POST',
+            headers: {
+              "Content-Type": "application/json; charset=utf-8",
+            },
+            body:JSON.stringify({
+                username: username ,
+                password: password
+            })
+        })
+
+
+*/
+    
+  
+function Login({ BASE_URL, handleLoginSuccess }) {
+  const [username, setUsername] = useState("");  // State to store username 
+  const [password, setPassword] = useState(""); // State to store password inputs
+  const [errorMessage, setErrorMessage] = useState(""); // State to handle error messages
+  const navigate = useNavigate(); // Hook to navigate to different routes
+
+  // Function to handle login form submission
+  const handleLoginSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const data = await fetch('https://fakestoreapi.com/auth/login',{
+        method:'POST',
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+        },
+        body: JSON.stringify({
+          username: username, 
+          password: password, 
+        })
+      });
+
+    // const data = await response.json(); 
+   
+    if (data.ok) {
+      console.log("Login successful");
+      console.log(data);
+      console.log(username)
+      console.log(password)
+
+      if (data.success) {
+        handleLoginSuccess(data.data.token); // Call the handleLoginSuccess function to set the token
+        localStorage.setItem("authToken", data.data.token); // Store the token in localStorage
+        navigate("/products"); // Navigate to the products page
+      } else {
+        setErrorMessage("Incorrect username or password"); // Display error message for incorrect credentials
+      }
+    } else {
+      setErrorMessage("An error occurred during login"); // Display error message for other login errors
+    }
+  } catch (error) {
+    console.error("An error occurred during login:", error);
+    setErrorMessage("An error occurred during login"); // Display error message for any other login errors
+  }
+};
+  return (
+    <div className="login-container">
+      <h2>Login</h2>
+      {errorMessage && <p className="error-message">{errorMessage}</p>}
+      <form className="login-form" onSubmit={handleLoginSubmit}>
+        <div>
+          <label htmlFor="loginUsername">Username</label>
+          <input
             type="text"
-            className="loginUsername"
-            placeholder="Enter Username" 
+            id="loginUsername"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
-            />
-          
-          </Form.Group>
-    
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control 
-            type="password" 
-            className= "loginPassword"
-            placeholder="Password" 
+          />
+        </div>
+        <div>
+          <label htmlFor="loginPassword">Password</label>
+          <input
+            type="password"
+            id="loginPassword"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Keep me signed in" />
-          </Form.Group>
-    
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Form>
+          />
         </div>
-      );
-    }
-    
-  
-  export default Login;
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  );
+}
+
+export default Login;

@@ -44,7 +44,7 @@ function App() {
     <Router>
       <div className="app">
 
-      <NavBar /> 
+      <NavBar isLoggedIn={Boolean(token)} logout={handleLogout} /> 
       
         <Routes>
           <Route path="/" element={<Home />} />
