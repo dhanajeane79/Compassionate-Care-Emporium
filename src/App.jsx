@@ -6,12 +6,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import "./index.css";
 import NavBar from "./Components/NavBar";
+import Layout from "./Components/Layout";
 import Home from "./Components/Home";
 import AllProducts from "./Components/AllProducts";
 import RegistrationForm from "./Components/RegistrationForm";
 import Login from "./Components/Login";
 import AboutUs from "./Components/AboutUs"
 import OrderStatus from "./Components/OrderStatus"
+import ContactUs from "./Components/ContactUs"
 
 
 
@@ -49,12 +51,13 @@ function App() {
       <NavBar isLoggedIn={Boolean(token)} logout={handleLogout} /> 
       
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/order-status" element={<OrderStatus />} />
-          <Route path="/products" element={<AllProducts BASE_URL={BASE_URL} token={token} />} />
-          <Route path="/register" element={<RegistrationForm BASE_URL={BASE_URL} />} /> 
-          <Route path="/login" element={<Login BASE_URL={BASE_URL} handleLoginSuccess={handleLoginSuccess} />} /> 
+          <Route path="/" element={<Layout> <Home /> </Layout>}/>
+          <Route path="/about" element={<Layout> <AboutUs /> </Layout>}/>
+          <Route path="/order-status" element={<Layout> <OrderStatus /> </Layout>}/>
+          <Route path="/contact" element={<Layout> <ContactUs /> </Layout>}/>
+          <Route path="/products" element={<Layout> <AllProducts BASE_URL={BASE_URL} token={token} /></Layout>}/>
+          <Route path="/register" element={<Layout> <RegistrationForm BASE_URL={BASE_URL} /></Layout>}/>
+          <Route path="/login" element={<Layout> <Login BASE_URL={BASE_URL} handleLoginSuccess={handleLoginSuccess} /></Layout>} /> 
         </Routes>
       </div>
     </Router>
