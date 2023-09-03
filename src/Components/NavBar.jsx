@@ -6,21 +6,26 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
+import "../CSS-Components/StyleNavBar.css"
 
 
 function NavBar() {
     return (
+
+
+
+
         <div style={{ width: '100%', backgroundColor: 'white' }}>
-        <Navbar expand="lg" className="bg-body-tertiary fixed-top" style={{ height: '60px' }}>
+        <Navbar expand="lg" className="top-nav fixed-top" style={{ height: '60px' }}>
         <Container fluid style={{ maxWidth: '1200px' }}>
-            <Link to="/" className="navbar-brand">
-              Compassionate Care Emporium
-            </Link>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
                 <Link to="/" className="nav-link">
                   Home
+                </Link>
+                <Link to="/about" className="nav-link">
+                  About Us
                 </Link>
                 <Link to="/products" className="nav-link">
                   All Products
