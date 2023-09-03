@@ -10,6 +10,7 @@ import Home from "./Components/Home";
 import AllProducts from "./Components/AllProducts";
 import RegistrationForm from "./Components/RegistrationForm";
 import Login from "./Components/Login";
+import AboutUs from "./Components/AboutUs"
 
 
 
@@ -48,6 +49,7 @@ function App() {
       
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/products" element={<AllProducts BASE_URL={BASE_URL} token={token} />} />
           <Route path="/register" element={<RegistrationForm BASE_URL={BASE_URL} />} /> 
           <Route path="/login" element={<Login BASE_URL={BASE_URL} handleLoginSuccess={handleLoginSuccess} />} /> 
