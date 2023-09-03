@@ -27,6 +27,9 @@ function NavBar() {
                 <Link to="/about" className="nav-link">
                   About Us
                 </Link>
+                <Link to="/order-status" className="nav-link">
+                  Order Status
+                </Link>
                 <Link to="/products" className="nav-link">
                   All Products
                 </Link>
