@@ -1,0 +1,11 @@
+
+/* Apply styles to the layout container */
+.layout-container {
+    position: relative;
+    padding-top: 60px; /* Adjust the top padding to match the height of the fixed Navbar */
+  }
+  
+  /* Apply styles to the page content */
+  .page-content {
+    padding: 20px; /* Add padding to create space between content and Navbar */
+  }
