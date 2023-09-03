@@ -23,6 +23,9 @@ function Home() {
             
           </div>
         </section>
+
+
+
         <footer className="home-footer">
           <p>&copy;All rights reserved.</p>
         </footer>
