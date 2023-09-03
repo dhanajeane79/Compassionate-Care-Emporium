@@ -8,5 +8,5 @@
   
   /* Apply styles to the page content */
   .page-content {
-    padding: 20px; /* Add padding to create space between content and Navbar */
+    padding-top: 100px; /* Add padding to create space between content and Navbar */
   }

@@ -8,9 +8,12 @@ function Layout({ children }) {
   return (
     <div className="layout-container">
       <NavBar />
+   
       <main className="page-content">
         {children}
       </main>
+      {/* Add the new section below the header */}
+     
     </div>
   );
 }

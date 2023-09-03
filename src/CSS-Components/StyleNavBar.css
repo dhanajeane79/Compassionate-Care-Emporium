@@ -1,18 +1,22 @@
+/* <Link to="/products" className="nav-link">
+                  All Products
+                </Link> */
+
+
+
+
+
 .top-nav {
     background-color: #f9f9f9
     
     
 }
 
-.top-nav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
+
 
 .fixed-top {
 
-    width: 100vw;
+    width: 100%;
 }
 
 .top-navbar {
@@ -51,22 +55,24 @@ justify-content: space-between;
 
 }
 
-.header {
-    background-color: lavender;
-    position: fixed;
-    top: 60px;
-    width: 100%;
-    right: 0;
-    left: 0;
-    z-index: 1;
-    padding: 10px; /* Adjust padding as needed */
-    text-align: center; /* Center the content */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-  }
+
+    .header {
+        background-color: lavender;
+        position: fixed;
+        top: 60px;
+        width: 100%;
+        right: 0;
+        left: 0;
+        z-index: 2; /* Higher z-index to appear on top */
+        padding: 10px;
+        text-align: center;
+        /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); */
+      }
+  
   
   /* Style the content within the fixed header */
   .header-container {
-    max-width: 1200px;
+    
     margin: 0 auto; /* Center the content horizontally */
     padding: 10px; /* Adjust padding as needed */
     color: #333; /* Text color */
@@ -112,3 +118,35 @@ gap: 20px;
                     Connect with a fellow Caregiver
                   </NavDropdown.Item>
                 </NavDropdown>} */
+
+                .product-categories {
+                    background-color: blue;
+                    padding: 20px; /* Adjust padding as needed */
+                    color: white; /* Text color for better visibility on a blue background */
+                  }
+
+                  .fixed-section {
+                    position: fixed;
+                    left: 0;
+                    right: 0;
+                    background-color: #fff;
+                    z-index: 1; /* Lower z-index to appear below the header */
+                  }
+                  
+                  .fixed-content {
+                    display: flex;
+                    justify-content: flex-start;
+                    margin: 0 auto; /* Center the content horizontally */
+                    padding-top: 12px; /* Adjust padding as needed */
+                    padding-left: 20px;
+                    background-color: rgb(115, 115, 155);
+                    /* Add more styles for the fixed content */
+                  }
+
+                  a {
+                    padding-top: 20px;
+                    padding-bottom: 10px;
+                    color: black;
+                    text-decoration: none;
+                }
+

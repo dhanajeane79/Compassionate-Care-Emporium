@@ -11,16 +11,17 @@ import overlayImage from '../assets/Logo7.png';
 
 
 function NavBar() {
-    return (
-<div>
-<section className="top-menu">
-    <div style={{ width: '100%', backgroundColor: 'white' }}>
-    <Navbar expand="lg" className="top-nav fixed-top" style={{ height: '60px' }}>
-  <Container fluid style={{ margin: '0px' }}>
-    <Navbar.Toggle aria-controls="navbarScroll" />
-    <Navbar.Collapse id="navbarScroll">
-      <div className="menu-items">
-        <Nav className="me-auto my-2 my-lg-0" style={{ width: "100%" }} navbarScroll>
+  return (
+    <div >
+      
+    
+        <div style={{ width: '100%', backgroundColor: 'white' }}>
+          <Navbar expand="lg" className="top-nav fixed-top" style={{ height: '60px' }}>
+            <Container fluid style={{ margin: '0px' }}>
+              <Navbar.Toggle aria-controls="navbarScroll" />
+              <Navbar.Collapse id="navbarScroll">
+                <div className="menu-items">
+                  <Nav className="me-auto my-2 my-lg-0" style={{ width: "100%" }} navbarScroll>
                 <Link to="/" className="nav-link">
                   Home
                 </Link>
@@ -33,9 +34,7 @@ function NavBar() {
                 <Link to="/contact" className="nav-link">
                   Contact Us
                 </Link>
-                <Link to="/products" className="nav-link">
-                  All Products
-                </Link>
+                
                 <NavDropdown title="Categories" id="navbarScrollingDropdown">
                   <NavDropdown.Item as={Link} to="/action3">
                     For Your Loved One
@@ -49,48 +48,50 @@ function NavBar() {
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
-          </div>
-      <div className="search-bar">
-        <Form className="d-flex">
-          <Form.Control id= "search-field" type="search" placeholder="Search" className="me-2" aria-label="Search" />
-          <Button variant="outline-success">Search</Button>
-        </Form>
-      </div>
-    </Navbar.Collapse>
-  </Container>
-</Navbar>
-    </div>
-  </section>
-        <header className="header" >
+              </div>
+                <div className="search-bar">
+                  <Form className="d-flex">
+                    <Form.Control id="search-field" type="search" placeholder="Search" className="me-2" aria-label="Search" />
+                    <Button variant="outline-success">Search</Button>
+                  </Form>
+                </div>
+              </Navbar.Collapse>
+            </Container>
+          </Navbar>
+        </div>
+    
+    
+      <div className="header" >
         <div className="header-list">
-          <div className= "header-logo">
-             <img src={overlayImage} alt="Logo" />
+          <div className="header-logo">
+            <img src={overlayImage} alt="Logo" />
+          </div>
+          <div className="header-item-container">
+            <Link to="/cart" className="nav-link">
+              Cart ()
+            </Link>
+            <Link to="/login" className="nav-link">
+              Login
+            </Link>
+            <Link to="/register" className="nav-link">
+              Register
+            </Link>
+          </div>
         </div>
-        <div className= "header-item-container">
-        <Link to="/cart" className="nav-link">
-                  Cart ()
-                </Link>
-                <Link to="/login" className="nav-link">
-                  Login
-                </Link>
-                <Link to="/register" className="nav-link">
-                  Register
-                </Link>
-        </div>
-        </div>
-      </header>
-
-      <section className= "bottom-nav">
-      <div className="bottom-nav-list">
       </div>
-      </section>
-
-      
-
-    </div>
+     
+      <div className="fixed-section">
+  <div className="fixed-content">
+   
+      <Link to="/products" className="bottom-nav-link">
+        All Products
+      </Link>
+    
+  </div>
+</div>
+      </div>
+  
   );
 }
-
-
 
 export default NavBar;
