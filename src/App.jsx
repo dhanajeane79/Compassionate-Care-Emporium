@@ -14,6 +14,7 @@ import Login from "./Components/Login";
 import AboutUs from "./Components/AboutUs"
 import OrderStatus from "./Components/OrderStatus"
 import ContactUs from "./Components/ContactUs"
+import ViewCart from "./Components/ViewCart";
 
 
 
@@ -56,6 +57,7 @@ function App() {
           <Route path="/order-status" element={<Layout> <OrderStatus /> </Layout>}/>
           <Route path="/contact" element={<Layout> <ContactUs /> </Layout>}/>
           <Route path="/products" element={<Layout> <AllProducts BASE_URL={BASE_URL} token={token} /></Layout>}/>
+          <Route path="/cart" element={<Layout> <ViewCart BASE_URL={BASE_URL} token={token} /></Layout>}/>
           <Route path="/register" element={<Layout> <RegistrationForm BASE_URL={BASE_URL} /></Layout>}/>
           <Route path="/login" element={<Layout> <Login BASE_URL={BASE_URL} handleLoginSuccess={handleLoginSuccess} /></Layout>} /> 
         </Routes>
