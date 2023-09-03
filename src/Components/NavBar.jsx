@@ -7,14 +7,15 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import "../CSS-Components/StyleNavBar.css"
+import overlayImage from '../assets/Logo7.png';
 
 
 function NavBar() {
     return (
 
 
-
-
+<div>
+<section className= "top-menu">
         <div style={{ width: '100%', backgroundColor: 'white' }}>
         <Navbar expand="lg" className="top-nav fixed-top" style={{ height: '60px' }}>
         <Container fluid style={{ maxWidth: '1200px' }}>
@@ -29,6 +30,9 @@ function NavBar() {
                 </Link>
                 <Link to="/order-status" className="nav-link">
                   Order Status
+                </Link>
+                <Link to="/contact" className="nav-link">
+                  Contact Us
                 </Link>
                 <Link to="/products" className="nav-link">
                   All Products
@@ -60,8 +64,24 @@ function NavBar() {
           </Container>
         </Navbar>
         </div>
-      );
-    }
+        </section>
+        <header className="header" >
+        <div className="header-list">
+          <div className= "header-logo">
+             <img src={overlayImage} alt="Logo" />
+        </div>
+        <div className= "header-item-container">
+ {/* Header Content */}
+        </div>
+        
+        </div>
+      </header>
+
     
+    </div>
+  );
+}
+
+
 
 export default NavBar;
