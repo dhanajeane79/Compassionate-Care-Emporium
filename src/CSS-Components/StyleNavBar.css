@@ -35,3 +35,10 @@
     padding-inline-start: 10px;
 
 }
+
+.header-item-container {
+display: flex;
+justify-content: flex-end;
+align-items: flex-end;
+gap: 20px;
+}
