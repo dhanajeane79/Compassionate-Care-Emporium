@@ -12,16 +12,15 @@ import overlayImage from '../assets/Logo7.png';
 
 function NavBar() {
     return (
-
-
 <div>
-<section className= "top-menu">
-        <div style={{ width: '100%', backgroundColor: 'white' }}>
-        <Navbar expand="lg" className="top-nav fixed-top" style={{ height: '60px' }}>
-        <Container fluid style={{ maxWidth: '1200px' }}>
-            <Navbar.Toggle aria-controls="navbarScroll" />
-            <Navbar.Collapse id="navbarScroll">
-              <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
+<section className="top-menu">
+    <div style={{ width: '100%', backgroundColor: 'white' }}>
+    <Navbar expand="lg" className="top-nav fixed-top" style={{ height: '60px' }}>
+  <Container fluid style={{ margin: '0px' }}>
+    <Navbar.Toggle aria-controls="navbarScroll" />
+    <Navbar.Collapse id="navbarScroll">
+      <div className="menu-items">
+        <Nav className="me-auto my-2 my-lg-0" style={{ width: "100%" }} navbarScroll>
                 <Link to="/" className="nav-link">
                   Home
                 </Link>
@@ -49,18 +48,19 @@ function NavBar() {
                     Connect with a fellow Caregiver
                   </NavDropdown.Item>
                 </NavDropdown>
-                
-                
               </Nav>
-              <Form className="d-flex">
-                <Form.Control type="search" placeholder="Search" className="me-2" aria-label="Search" />
-                <Button variant="outline-success">Search</Button>
-              </Form>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-        </div>
-        </section>
+          </div>
+      <div className="search-bar">
+        <Form className="d-flex">
+          <Form.Control id= "search-field" type="search" placeholder="Search" className="me-2" aria-label="Search" />
+          <Button variant="outline-success">Search</Button>
+        </Form>
+      </div>
+    </Navbar.Collapse>
+  </Container>
+</Navbar>
+    </div>
+  </section>
         <header className="header" >
         <div className="header-list">
           <div className= "header-logo">
@@ -77,11 +77,16 @@ function NavBar() {
                   Register
                 </Link>
         </div>
-        
         </div>
       </header>
 
-    
+      <section className= "bottom-nav">
+      <div className="bottom-nav-list">
+      </div>
+      </section>
+
+      
+
     </div>
   );
 }

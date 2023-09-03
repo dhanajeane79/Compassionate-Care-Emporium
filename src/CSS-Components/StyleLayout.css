@@ -3,6 +3,7 @@
 .layout-container {
     position: relative;
     padding-top: 60px; /* Adjust the top padding to match the height of the fixed Navbar */
+    width: 100%;
   }
   
   /* Apply styles to the page content */

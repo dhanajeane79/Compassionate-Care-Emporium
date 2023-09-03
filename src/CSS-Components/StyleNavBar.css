@@ -1,9 +1,56 @@
 .top-nav {
     background-color: #f9f9f9
+    
+    
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.fixed-top {
+
+    width: 100vw;
+}
+
+.top-navbar {
+
+    width: 100%
+}
+
+/* .top-nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-inline-start: 10px;
+
+} */
+
+/* Apply styles to the fixed header */
+
+.menu-items {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start; /* Align menu items to the left */
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: flex-end; /* Align search bar to the right */
+    align-items: flex-end; /* Vertically center the search bar */
+    margin-right: 15px; /* Add margin to separate it from menu items */
+  }
+
+NavBar {
+display: flex;
+justify-content: space-between;
 
 }
 
-/* Apply styles to the fixed header */
 .header {
     background-color: lavender;
     position: fixed;
@@ -42,3 +89,26 @@ justify-content: flex-end;
 align-items: flex-end;
 gap: 20px;
 }
+
+.container-fluid {
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+    /* {<Link to="/products" className="nav-link">
+                  All Products
+                </Link>
+                <NavDropdown title="Categories" id="navbarScrollingDropdown">
+                  <NavDropdown.Item as={Link} to="/action3">
+                    For Your Loved One
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to="/action4">
+                    For You
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item as={Link} to="/action5">
+                    Connect with a fellow Caregiver
+                  </NavDropdown.Item>
+                </NavDropdown>} */
