@@ -1,67 +1,63 @@
-
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from 'react-router-dom';
-import "../CSS-Components/StyleNavBar.css"
-import overlayImage from '../assets/Logo7.png';
-
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+// import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
+import "../CSS-Components/StyleNavBar.css";
+import overlayImage from "../assets/Logo7.png";
 
 function NavBar() {
   return (
-    <div >
-      
-    
-        <div style={{ width: '100%', backgroundColor: 'white' }}>
-          <Navbar expand="lg" className="top-nav fixed-top" style={{ height: '60px' }}>
-            <Container fluid style={{ margin: '0px' }}>
-              <Navbar.Toggle aria-controls="navbarScroll" />
-              <Navbar.Collapse id="navbarScroll">
-                <div className="menu-items">
-                  <Nav className="me-auto my-2 my-lg-0" style={{ width: "100%" }} navbarScroll>
-                <Link to="/" className="nav-link">
-                  Home
-                </Link>
-                <Link to="/about" className="nav-link">
-                  About Us
-                </Link>
-                <Link to="/order-status" className="nav-link">
-                  Order Status
-                </Link>
-                <Link to="/contact" className="nav-link">
-                  Contact Us
-                </Link>
-                
-                <NavDropdown title="Categories" id="navbarScrollingDropdown">
-                  <NavDropdown.Item as={Link} to="/action3">
-                    For Your Loved One
-                  </NavDropdown.Item>
-                  <NavDropdown.Item as={Link} to="/action4">
-                    For You
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item as={Link} to="/action5">
-                    Connect with a fellow Caregiver
-                  </NavDropdown.Item>
-                </NavDropdown>
-              </Nav>
+    <div>
+      <div style={{ width: "100%", backgroundColor: "white" }}>
+        <Navbar
+          expand="lg"
+          className="top-nav fixed-top"
+          style={{ height: "60px" }}
+        >
+          <Container fluid style={{ margin: "0px" }}>
+            <Navbar.Toggle aria-controls="navbarScroll" />
+            <Navbar.Collapse id="navbarScroll">
+              <div className="menu-items">
+                <Nav
+                  className="me-auto my-2 my-lg-0"
+                  style={{ width: "100%" }}
+                  navbarScroll
+                >
+                  <Link to="/" className="nav-link">
+                    Home
+                  </Link>
+                  <Link to="/about" className="nav-link">
+                    About Us
+                  </Link>
+                  <Link to="/order-status" className="nav-link">
+                    Order Status
+                  </Link>
+                  <Link to="/contact" className="nav-link">
+                    Contact Us
+                  </Link>
+                </Nav>
               </div>
-                <div className="search-bar">
-                  <Form className="d-flex">
-                    <Form.Control id="search-field" type="search" placeholder="Search" className="me-2" aria-label="Search" />
-                    <Button variant="outline-success">Search</Button>
-                  </Form>
-                </div>
-              </Navbar.Collapse>
-            </Container>
-          </Navbar>
-        </div>
-    
-    
-      <div className="header" >
+              <div className="search-bar">
+                <Form className="d-flex">
+                  <Form.Control
+                    id="search-field"
+                    type="search"
+                    placeholder="Search"
+                    className="me-2"
+                    aria-label="Search"
+                  />
+                  <Button variant="outline-success">Search</Button>
+                </Form>
+              </div>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+      </div>
+
+      <div className="header">
         <div className="header-list">
           <div className="header-logo">
             <img src={overlayImage} alt="Logo" />
@@ -79,18 +75,36 @@ function NavBar() {
           </div>
         </div>
       </div>
-     
+
       <div className="fixed-section">
-  <div className="fixed-content">
-   
-      <Link to="/products" className="bottom-nav-link">
-        All Products
-      </Link>
-    
-  </div>
-</div>
+        <div className="fixed-content">
+          <Link to="/products" className="bottom-nav-link">
+            All Products
+          </Link>
+          <Link to="/products" className="bottom-nav-link">
+            Around the House
+          </Link>
+          <Link to="/products" className="bottom-nav-link">
+           Comfort
+          </Link>
+          <Link to="/products" className="bottom-nav-link">
+            Safety
+          </Link>
+          {/* <NavDropdown title="Categories" id="navbarScrollingDropdown">
+            <NavDropdown.Item as={Link} to="/action3">
+              For Your Loved One
+            </NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/action4">
+              For You
+            </NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item as={Link} to="/action5">
+              Connect with a fellow Caregiver
+            </NavDropdown.Item>
+          </NavDropdown> */}
+        </div>
       </div>
-  
+    </div>
   );
 }
 
