@@ -1,21 +1,16 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React from 'react';
-import NavBar from './NavBar'; // Replace with the path to your Navbar component
-import '../CSS-Components/StyleLayout.css'; // Import the CSS file for the layout styles
+import React from "react";
+import NavBar from "./NavBar"; 
+import "../CSS-Components/StyleLayout.css"; 
 
 function Layout({ children }) {
   return (
-    <div className="layout-container">
-      <NavBar />
-   
-      <main className="page-content">
-        {children}
-      </main>
+    <div>
+      <main className="page-content">{children}</main>
       <footer className="home-footer">
         <p>&copy; All rights reserved.</p>
       </footer>
-     
     </div>
   );
 }
