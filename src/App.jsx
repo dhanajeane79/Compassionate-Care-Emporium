@@ -5,7 +5,7 @@ import React, { useRef, useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import "./index.css";
-import TestNav from "./Components/NavBar";
+import NavBar from "./Components/NavBar";
 import Layout from "./Components/Layout";
 import Home from "./Components/Home";
 import AllProducts from "./Components/AllProducts";
@@ -49,7 +49,7 @@ function App() {
     <Router>
       <div className="app">
 
-      <TestNav isLoggedIn={Boolean(token)} logout={handleLogout} /> 
+      <NavBar isLoggedIn={Boolean(token)} logout={handleLogout} /> 
       
         <Routes>
           <Route path="/" element={<Layout> <Home /> </Layout>}/>
