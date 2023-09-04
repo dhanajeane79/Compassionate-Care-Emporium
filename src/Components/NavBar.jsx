@@ -62,6 +62,8 @@ function NavBar() {
           <div className="header-logo">
             <img src={overlayImage} alt="Logo" />
           </div>
+          {/* <div className="header-text"> */}
+      <h2 className="header-title">Compassionate Care Emporium</h2>
           <div className="header-item-container">
             <Link to="/cart" className="nav-link">
               Cart ()
@@ -73,7 +75,7 @@ function NavBar() {
               Register
             </Link>
           </div>
-        </div>
+        {/* </div> */}
       </div>
 
       <div className="fixed-section">
@@ -104,6 +106,7 @@ function NavBar() {
           </NavDropdown> */}
         </div>
       </div>
+    </div>
     </div>
   );
 }
