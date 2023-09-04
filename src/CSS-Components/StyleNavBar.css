@@ -1,4 +1,4 @@
-.top-nav {
+/* .top-nav {
     background-color: #f9f9f9
 }
 
@@ -113,4 +113,58 @@ a {
     padding-bottom: 10px;
     color: black;
     text-decoration: none;
+} */
+
+.nav-bar-combo {
+    position: fixed;
+    top: 1px;
+    right: 210px;
+    left: 210px;
+}
+
+.container {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 0px;
+}
+
+.middle-nav {
+    background-color: cadetblue; /* Replace with your desired background color */
+    /* Add any other styles as needed */
+  }
+
+.middle-nav {
+display: flex;
+justify-content: space-between; 
+}
+
+.middle-nav-container {
+    text-align: center; /* Center the contents horizontally */
+  }
+
+  .middle-nav-link-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 50px;
+  }
+  
+  .header-title-container {
+    padding-left: 50px;
+  }
+
+  .ms-auto {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+  }
+
+.nav-link {
+    align-content: end;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.bottom-nav-link-container {
+    padding-top: 10px;
+
 }
