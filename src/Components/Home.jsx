@@ -36,9 +36,7 @@ function Home() {
         ))}
       </section>
       </div>
-      <footer className="home-footer">
-        <p>&copy; All rights reserved.</p>
-      </footer>
+    
     </div>
   );
 }

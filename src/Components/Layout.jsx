@@ -12,7 +12,9 @@ function Layout({ children }) {
       <main className="page-content">
         {children}
       </main>
-      {/* Add the new section below the header */}
+      <footer className="home-footer">
+        <p>&copy; All rights reserved.</p>
+      </footer>
      
     </div>
   );
